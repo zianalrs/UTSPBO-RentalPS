@@ -27,41 +27,49 @@ public class Main {
         int pilihan;
 
         do {
-            System.out.println("================================");
+
+            System.out.println("\n================================");
             System.out.println("   SELAMAT DATANG DI RENTAL PS  ");
             System.out.println("================================");
             System.out.println("1. Lihat PlayStation");
             System.out.println("2. Booking PS");
             System.out.println("3. Lihat Transaksi");
             System.out.println("4. Kelola PlayStation");
+            System.out.println("5. Selesai Sewa");
             System.out.println("0. Keluar");
             System.out.println("================================");
             System.out.print("Pilih >> ");
             pilihan = input.nextInt();
 
-            switch (pilihan) {
-                case 1:
-                    lihatPS();
-                    break;
+            if (pilihan == 1) {
 
-                case 2:
-                    bookingPS();
-                    break;
+                lihatPS();
 
-                case 3:
-                    lihatTransaksi();
-                    break;
+            } else if (pilihan == 2) {
 
-                case 4:
-                    menuPlayStation();
-                    break;
+                bookingPS();
 
-                case 0:
-                    System.out.println("\nTerima kasih telah menggunakan Rental PS.");
-                    break;
+            } else if (pilihan == 3) {
 
-                default:
-                    System.out.println("\nPilihan tidak tersedia.");
+                lihatTransaksi();
+
+            } else if (pilihan == 4) {
+
+                menuPlayStation();
+
+            } else if (pilihan == 5) {
+
+                selesaiSewa();
+
+            } else if (pilihan == 0) {
+
+                System.out.println(
+                    "\nTerima kasih telah menggunakan Rental PS."
+                );
+
+            } else {
+
+                System.out.println("\nPilihan tidak tersedia.");
             }
 
         } while (pilihan != 0);
@@ -70,9 +78,11 @@ public class Main {
     // ==============================
     // CEK ID PLAYSTATION
     // ==============================
+
     static boolean cekIdPS(int id) {
 
         for (PlayStation ps : daftarPS) {
+
             if (ps.getIdPs() == id) {
                 return true;
             }
@@ -84,9 +94,11 @@ public class Main {
     // ==============================
     // CEK ID PELANGGAN
     // ==============================
+
     static boolean cekIdPelanggan(int id) {
 
         for (Pelanggan pelanggan : daftarPelanggan) {
+
             if (pelanggan.getIdPelanggan() == id) {
                 return true;
             }
@@ -98,9 +110,11 @@ public class Main {
     // ==============================
     // CEK ID TRANSAKSI
     // ==============================
+
     static boolean cekIdTransaksi(int id) {
 
         for (Transaksi transaksi : daftarTransaksi) {
+
             if (transaksi.getIdTransaksi() == id) {
                 return true;
             }
@@ -112,6 +126,7 @@ public class Main {
     // ==============================
     // LIHAT PLAYSTATION
     // ==============================
+
     static void lihatPS() {
 
         System.out.println("\n================================");
@@ -119,12 +134,15 @@ public class Main {
         System.out.println("================================");
 
         if (daftarPS.isEmpty()) {
+
             System.out.println("Belum ada data PlayStation.");
             return;
         }
 
         for (PlayStation ps : daftarPS) {
+
             ps.tampilkanData();
+
             System.out.println("--------------------------------");
         }
     }
@@ -132,11 +150,13 @@ public class Main {
     // ==============================
     // MENU KELOLA PLAYSTATION
     // ==============================
+
     static void menuPlayStation() {
 
         int pilihan;
 
         do {
+
             System.out.println("\n================================");
             System.out.println("        KELOLA PLAYSTATION      ");
             System.out.println("================================");
@@ -147,31 +167,32 @@ public class Main {
             System.out.println("0. Kembali");
             System.out.println("================================");
             System.out.print("Pilih >> ");
+
             pilihan = input.nextInt();
 
-            switch (pilihan) {
+            if (pilihan == 1) {
 
-                case 1:
-                    tambahPS();
-                    break;
+                tambahPS();
 
-                case 2:
-                    lihatPS();
-                    break;
+            } else if (pilihan == 2) {
 
-                case 3:
-                    ubahPS();
-                    break;
+                lihatPS();
 
-                case 4:
-                    hapusPS();
-                    break;
+            } else if (pilihan == 3) {
 
-                case 0:
-                    break;
+                ubahPS();
 
-                default:
-                    System.out.println("\nPilihan tidak tersedia.");
+            } else if (pilihan == 4) {
+
+                hapusPS();
+
+            } else if (pilihan == 0) {
+
+                System.out.println("Kembali ke menu utama.");
+
+            } else {
+
+                System.out.println("Pilihan tidak tersedia.");
             }
 
         } while (pilihan != 0);
@@ -180,6 +201,7 @@ public class Main {
     // ==============================
     // TAMBAH PLAYSTATION
     // ==============================
+
     static void tambahPS() {
 
         System.out.println("\n================================");
@@ -194,9 +216,12 @@ public class Main {
             id = input.nextInt();
 
             if (cekIdPS(id)) {
+
                 System.out.println("ID PS sudah digunakan.");
                 System.out.println("Silakan masukkan ID lain.");
+
             } else {
+
                 break;
             }
         }
@@ -204,16 +229,19 @@ public class Main {
         System.out.println("\n1. PS4");
         System.out.println("2. PS5");
         System.out.print("Pilih jenis PS >> ");
+
         int pilihanJenis = input.nextInt();
 
         if (pilihanJenis == 1) {
 
             daftarPS.add(new PS4(id));
+
             System.out.println("PS4 berhasil ditambahkan.");
 
         } else if (pilihanJenis == 2) {
 
             daftarPS.add(new PS5(id));
+
             System.out.println("PS5 berhasil ditambahkan.");
 
         } else {
@@ -225,6 +253,7 @@ public class Main {
     // ==============================
     // UBAH STATUS PLAYSTATION
     // ==============================
+
     static void ubahPS() {
 
         System.out.println("\n================================");
@@ -244,16 +273,19 @@ public class Main {
                 System.out.println("\n1. Tersedia");
                 System.out.println("2. Disewa");
                 System.out.print("Pilih status >> ");
+
                 int pilihan = input.nextInt();
 
                 if (pilihan == 1) {
 
                     ps.setStatus("Tersedia");
+
                     System.out.println("Status berhasil diubah.");
 
                 } else if (pilihan == 2) {
 
                     ps.setStatus("Disewa");
+
                     System.out.println("Status berhasil diubah.");
 
                 } else {
@@ -271,6 +303,7 @@ public class Main {
     // ==============================
     // HAPUS PLAYSTATION
     // ==============================
+
     static void hapusPS() {
 
         System.out.println("\n================================");
@@ -280,7 +313,10 @@ public class Main {
         System.out.print("Masukkan ID PS >> ");
         int id = input.nextInt();
 
-        for (PlayStation ps : daftarPS) {
+        // Menggunakan index agar aman saat menghapus ArrayList
+        for (int i = 0; i < daftarPS.size(); i++) {
+
+            PlayStation ps = daftarPS.get(i);
 
             if (ps.getIdPs() == id) {
 
@@ -288,12 +324,14 @@ public class Main {
 
                     System.out.println("PS sedang disewa.");
                     System.out.println("PS tidak dapat dihapus.");
+
                     return;
                 }
 
-                daftarPS.remove(ps);
+                daftarPS.remove(i);
 
                 System.out.println("PS berhasil dihapus.");
+
                 return;
             }
         }
@@ -304,6 +342,7 @@ public class Main {
     // ==============================
     // BOOKING PLAYSTATION
     // ==============================
+
     static void bookingPS() {
 
         System.out.println("\n================================");
@@ -320,7 +359,9 @@ public class Main {
         for (PlayStation ps : daftarPS) {
 
             if (ps.getIdPs() == idPs) {
+
                 psDipilih = ps;
+
                 break;
             }
         }
@@ -328,16 +369,21 @@ public class Main {
         if (psDipilih == null) {
 
             System.out.println("ID PS tidak ditemukan.");
+
             return;
         }
 
         if (psDipilih.getStatus().equalsIgnoreCase("Disewa")) {
 
             System.out.println("PS sedang disewa.");
+
             return;
         }
 
-        // ID Pelanggan
+        // ==============================
+        // ID PELANGGAN
+        // ==============================
+
         int idPelanggan;
 
         while (true) {
@@ -364,7 +410,10 @@ public class Main {
         System.out.print("Masukkan nomor HP >> ");
         String noHp = input.nextLine();
 
-        // ID Transaksi
+        // ==============================
+        // ID TRANSAKSI
+        // ==============================
+
         int idTransaksi;
 
         while (true) {
@@ -386,44 +435,43 @@ public class Main {
         System.out.print("Masukkan durasi sewa (jam) >> ");
         int durasi = input.nextInt();
 
-        // Mengambil harga dari subclass PS4 atau PS5
+        // Mengambil harga dari PS4 atau PS5
         int hargaPerJam = psDipilih.getHargaPerJam();
 
         int totalBayar = durasi * hargaPerJam;
 
         Pelanggan pelanggan = new Pelanggan(
-                idPelanggan,
-                nama,
-                noHp
+            idPelanggan,
+            nama,
+            noHp
         );
 
         Transaksi transaksi = new Transaksi(
-                idTransaksi,
-                nama,
-                psDipilih.getJenisPs(),
-                durasi,
-                totalBayar
+            idTransaksi,
+            nama,
+            psDipilih.getJenisPs(),
+            durasi,
+            totalBayar
         );
 
         daftarPelanggan.add(pelanggan);
         daftarTransaksi.add(transaksi);
 
+        // Mengubah status PS
         psDipilih.setStatus("Disewa");
 
         System.out.println("\n================================");
         System.out.println("         BOOKING BERHASIL       ");
         System.out.println("================================");
-        System.out.println("ID Transaksi : " + idTransaksi);
-        System.out.println("Nama         : " + nama);
-        System.out.println("Jenis PS     : " + psDipilih.getJenisPs());
-        System.out.println("Durasi       : " + durasi + " jam");
-        System.out.println("Harga/Jam    : Rp" + hargaPerJam);
-        System.out.println("Total Bayar  : Rp" + totalBayar);
+
+        // Cetak struk menggunakan method overloading
+        transaksi.tampilkanData("STRUK RENTAL PS");
     }
 
     // ==============================
     // LIHAT TRANSAKSI
     // ==============================
+
     static void lihatTransaksi() {
 
         System.out.println("\n================================");
@@ -433,13 +481,51 @@ public class Main {
         if (daftarTransaksi.isEmpty()) {
 
             System.out.println("Belum ada transaksi.");
+
             return;
         }
 
         for (Transaksi transaksi : daftarTransaksi) {
 
             transaksi.tampilkanData();
+
             System.out.println("--------------------------------");
         }
+    }
+
+    // ==============================
+    // SELESAI SEWA
+    // ==============================
+
+    static void selesaiSewa() {
+
+        System.out.println("\n================================");
+        System.out.println("          SELESAI SEWA          ");
+        System.out.println("================================");
+
+        System.out.print("Masukkan ID PS >> ");
+        int id = input.nextInt();
+
+        for (PlayStation ps : daftarPS) {
+
+            if (ps.getIdPs() == id) {
+
+                if (ps.getStatus().equalsIgnoreCase("Tersedia")) {
+
+                    System.out.println("PS tersebut tidak sedang disewa.");
+
+                } else {
+
+                    ps.setStatus("Tersedia");
+
+                    System.out.println("Sewa berhasil diselesaikan.");
+                    System.out.println("Status PS sekarang: Tersedia");
+                }
+
+                return;
+            }
+        }
+
+        System.out.println("ID PS tidak ditemukan.");
     }
 }

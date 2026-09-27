@@ -9,6 +9,7 @@ package com.mycompany.rentalps;
  * @author LOQ
  */
 public class Pelanggan {
+
     private int idPelanggan;
     private String nama;
     private String noHp;
