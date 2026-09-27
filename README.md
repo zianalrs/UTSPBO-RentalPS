@@ -1,5 +1,9 @@
 # Sistem Rental PS
 
+Nama: Zian Alrais
+
+NIM : 2509116064
+
 ## 1. Deskripsi Proyek
 
 Sistem Rental PS merupakan program berbasis Java yang digunakan untuk mengelola proses penyewaan PlayStation. Program ini dapat digunakan untuk melihat daftar PlayStation, melakukan booking, melihat transaksi, mengelola data PlayStation, serta menyelesaikan penyewaan.
