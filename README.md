@@ -16,7 +16,7 @@ Class yang digunakan dalam program ini yaitu `PlayStation`, `PS4`, `PS5`, `Pelan
 
 Saat program dijalankan, sistem akan menampilkan menu utama yang terdiri dari beberapa pilihan.
 
-[ss menu utama]
+<img width="303" height="208" alt="image" src="https://github.com/user-attachments/assets/9a568f57-8c7a-4b3c-8424-b87d35de834a" />
 
 Pengguna dapat memilih menu dengan memasukkan nomor sesuai dengan pilihan yang tersedia.
 
@@ -24,67 +24,63 @@ Pengguna dapat memilih menu dengan memasukkan nomor sesuai dengan pilihan yang t
 
 Pada menu **Lihat PlayStation**, sistem akan menampilkan daftar PlayStation yang tersedia beserta ID, jenis PS, status, dan harga sewa per jam.
 
-[ss output lihat playstation]
+<img width="294" height="374" alt="image" src="https://github.com/user-attachments/assets/15bf6d48-39a8-4288-8cf3-8224e10498a1" />
 
 ### 2.3 Booking PS
 
 Untuk melakukan penyewaan, pengguna memilih menu **Booking PS**. Sistem akan menampilkan daftar PlayStation dan pengguna memasukkan ID PlayStation yang ingin disewa.
 
-[ss menu booking ps]
+<img width="296" height="534" alt="image" src="https://github.com/user-attachments/assets/9d17b513-7689-4edc-bc80-df93c6649c45" />
 
-Setelah memilih PlayStation, pengguna memasukkan data pelanggan berupa ID pelanggan, nama, dan nomor HP. Selanjutnya pengguna memasukkan ID transaksi dan durasi penyewaan.
+Setelah memilih PlayStation, pengguna memasukkan data pelanggan berupa ID pelanggan, nama, dan nomor HP. Selanjutnya pengguna memasukkan ID transaksi dan durasi penyewaan. Sistem akan menghitung total pembayaran berdasarkan durasi penyewaan dan harga PlayStation. Jika booking berhasil, status PlayStation akan berubah menjadi **Disewa**.
 
-[ss input data booking]
-
-Sistem akan menghitung total pembayaran berdasarkan durasi penyewaan dan harga PlayStation. Jika booking berhasil, status PlayStation akan berubah menjadi **Disewa**.
-
-[ss output booking berhasil]
+<img width="299" height="56" alt="image" src="https://github.com/user-attachments/assets/c0187c76-d9eb-467f-abf9-704c05694300" />
 
 Setelah itu, sistem akan menampilkan struk rental yang berisi informasi transaksi dan total pembayaran.
 
-[ss output struk rental ps]
+<img width="297" height="184" alt="image" src="https://github.com/user-attachments/assets/6aa62daa-a06f-44c9-9f6b-527b11abe06e" />
 
 ### 2.4 Lihat Transaksi
 
 Pada menu **Lihat Transaksi**, pengguna dapat melihat data transaksi yang telah dilakukan.
 
-[ss output lihat transaksi]
+<img width="290" height="99" alt="image" src="https://github.com/user-attachments/assets/91cdfe04-870e-4afb-b7e4-8aa57e31f30f" />
 
 ### 2.5 Kelola PlayStation
 
 Menu **Kelola PlayStation** digunakan untuk mengelola data PlayStation. Menu ini memiliki beberapa pilihan, yaitu tambah, lihat, ubah, dan hapus data PlayStation.
 
-[ss menu kelola playstation]
+<img width="294" height="184" alt="image" src="https://github.com/user-attachments/assets/4b6e43c4-5e10-45c4-8023-845fabb1ad9d" />
 
 #### Tambah PlayStation
 
 Pengguna dapat menambahkan PlayStation baru dengan memasukkan ID dan memilih jenis PlayStation.
 
-[ss output tambah ps]
+<img width="299" height="188" alt="image" src="https://github.com/user-attachments/assets/b9f74b08-0373-44b6-9d4e-b28b5eb34613" />
 
 #### Ubah PlayStation
 
 Pengguna dapat mengubah data PlayStation berdasarkan ID yang dipilih.
 
-[ss output ubah ps]
+<img width="293" height="248" alt="image" src="https://github.com/user-attachments/assets/6c021346-e28f-4f43-b877-53bf69ced669" />
 
 #### Hapus PlayStation
 
 Pengguna dapat menghapus data PlayStation berdasarkan ID yang dipilih.
 
-[ss output hapus ps]
+<img width="295" height="110" alt="image" src="https://github.com/user-attachments/assets/4c31809e-251a-4453-9488-eaec186eb4f4" />
 
 ### 2.6 Selesai Sewa
 
 Setelah penyewaan selesai, pengguna dapat memilih menu **Selesai Sewa**. Sistem akan mengubah status PlayStation dari **Disewa** menjadi **Tersedia** sehingga PlayStation dapat digunakan untuk penyewaan berikutnya.
 
-[ss output selesai sewa]
+<img width="302" height="131" alt="image" src="https://github.com/user-attachments/assets/67ec3dab-c55a-454f-a735-86d8a0005b15" />
 
 ### 2.7 Keluar
 
 Pengguna dapat memilih menu **Keluar** untuk menghentikan program.
 
-[ss output keluar program]
+<img width="376" height="274" alt="image" src="https://github.com/user-attachments/assets/5e7e4cb0-c180-4002-92ea-58087df5790b" />
 
 ---
 
